@@ -15,6 +15,6 @@ Comparer les positions que vous choisissez d’exprimer à des votes publics sou
 
 Il s’agit de comparer des votes, sans conseil de vote ni étiquetage politique.
 
-**Aujourd’hui :** ce dépôt présente le projet sous forme de documentation ; aucune application n’est encore disponible.
+**Aujourd’hui :** le code et les tests sont présents ; leur intégration locale est en cours. Le [guide de développement](docs/DEVELOPMENT.md) décrit l’installation et les vérifications.
 
 [Catalogue](https://github.com/libre-ai/.github/blob/main/profile/README.fr.md) · [Contribuer](https://github.com/libre-ai/.github/blob/main/CONTRIBUTING.md) · [English](README.md) · [Licence CC BY 4.0](LICENSES/CC-BY-4.0.txt)

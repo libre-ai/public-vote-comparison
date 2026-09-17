@@ -1,0 +1,438 @@
+{
+  "schemaVersion": "code-recovery.v1",
+  "files": [
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": ".gitignore",
+      "sourceBlob": "5a430e6a37059665b16bc9d2075c97607dff339d",
+      "destinationPath": ".gitignore",
+      "sha256": "19b23de57a80020117177f6f3a34b5b5ce98c2623a8e8e6e211453bbf6458bfa"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "LICENSE",
+      "sourceBlob": "d75e6b29a32cd25720f92e60278f73ce67a63078",
+      "destinationPath": "LICENSE",
+      "sha256": "9ca91e5ef6bd3e2907831d56ba8b4f2ffcc603f44540247b0f89f3e65323d38c"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "LICENSES/CC-BY-4.0.txt",
+      "sourceBlob": "13ca539f377dc705af32b8d2ce89262298ea2f06",
+      "destinationPath": "docs/source-licensing/boussole-politique/LICENSES/CC-BY-4.0.txt",
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "LICENSES/EUPL-1.2.txt",
+      "sourceBlob": "6d8cea430e21d06532225018850da91a3f44abf5",
+      "destinationPath": "LICENSES/EUPL-1.2.txt",
+      "sha256": "57fb42fbcd0b037ce528ed8f72f1ec095d67bc6825ecf1448ff39be1fe68a4b4"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "REUSE.toml",
+      "sourceBlob": "27401668e52e6abc5fb81e56993d1a43ae5eba73",
+      "destinationPath": "REUSE.toml",
+      "sha256": "f67a55da7244ed1d397523eae9a3c1828ba36138c6b23cdfd296adeb30a37313"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/README.md",
+      "sourceBlob": "67ae51171942aa606579629f4870731f33cf215d",
+      "destinationPath": "apps/boussole/README.md",
+      "sha256": "89ad2a915d5b26217974d0f3fba7d96bb55b763400313e28fdb0b5b03e6d094d"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/bun.lock",
+      "sourceBlob": "89196ed5ff4ae635858e8268dc41e62460e93b61",
+      "destinationPath": "apps/boussole/bun.lock",
+      "sha256": "ba7e5c72ae49b7d9fc2fd4fcdf7cbe031440b2e288ac29068f166d8ed8fe7723"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/e2e/data-ownership.e2e.ts",
+      "sourceBlob": "6e468605f4546fa97b1594ba580ff155fef5ed15",
+      "destinationPath": "apps/boussole/e2e/data-ownership.e2e.ts",
+      "sha256": "840626d8c1de048639dac3065ee79028c8567ff549ec1b5c2a1f3281abc309f1"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/e2e/no-js.e2e.ts",
+      "sourceBlob": "5fc5d6276e6053d8eff5a3ab2c52d2c28b7c9e7d",
+      "destinationPath": "apps/boussole/e2e/no-js.e2e.ts",
+      "sha256": "c29b79c69f05be9c89cd7b390aa1d8220229fd84129f2ae0351bb24ef5f8c68a"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/e2e/pwa.e2e.ts",
+      "sourceBlob": "a11d083c209c2ccfb05c717d0ca6a39f46cda1a6",
+      "destinationPath": "apps/boussole/e2e/pwa.e2e.ts",
+      "sha256": "e8810d9ace66b628166090435a741d6f798499e6077c04b4788465ff240a9273"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/e2e/questionnaire.e2e.ts",
+      "sourceBlob": "38825bb981d9271f77912aca48c4a7e6e1176b7f",
+      "destinationPath": "apps/boussole/e2e/questionnaire.e2e.ts",
+      "sha256": "c04562ab4c9dfff6ba55f9cbd1170db4d45a752377e749b3df6a6cb5569fe7b1"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/package.json",
+      "sourceBlob": "a045cfbe691e0e8b1e0c47f645781a23a06dad0c",
+      "destinationPath": "apps/boussole/package.json",
+      "sha256": "cce870e46e460bad37235ec7f039051ee21742f7c68b600a38e1ec890fc78ccf"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/playwright.config.ts",
+      "sourceBlob": "f018f014f5f035e9c74b6af51cf81c12a6c7dba1",
+      "destinationPath": "apps/boussole/playwright.config.ts",
+      "sha256": "570da232266bd139c7d1b0f5f9ce6030f6d136f0851d82c87746cec5eb98bec8"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/public/icon.svg",
+      "sourceBlob": "78ed3098128c2fdc7fe26a239d99e0e4270e9f8d",
+      "destinationPath": "apps/boussole/public/icon.svg",
+      "sha256": "2da6f9b1db6ffa355a192072d4bb379d75e9ba948b287f013a89b2b0fde40160"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/scripts/build-service-worker.ts",
+      "sourceBlob": "0574befa23e3e2e7827f48cb39b7e4793359f6ca",
+      "destinationPath": "apps/boussole/scripts/build-service-worker.ts",
+      "sha256": "f8da566b69042d0b764a86651ad2c182628bd61f05d5622e77e622a74fd2aaff"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/scripts/build.ts",
+      "sourceBlob": "9d637754a4f63b78ab515e5c8bb0bf47f7cb0e95",
+      "destinationPath": "apps/boussole/scripts/build.ts",
+      "sha256": "b68f64050f144f4fbeb23cf14812ff2f1a950e0420bf4d8f732bea53299cb6c5"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/client/app.tsx",
+      "sourceBlob": "59d4b4e6187dd73512ac1042a07bae89d37f51d3",
+      "destinationPath": "apps/boussole/src/client/app.tsx",
+      "sha256": "0ed6fe338a5751b8496b3bee80d1f1fa02528a2ec71997fc37891f10e65b8dba"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/client/use-questionnaire.ts",
+      "sourceBlob": "db2d2e9930b5b072d5a546049dfec2406f043091",
+      "destinationPath": "apps/boussole/src/client/use-questionnaire.ts",
+      "sha256": "b2eee849335a0c0f8ec9f9c86c07d4599406a750be5c5f30d88bc383218d8e15"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/crypto/symmetric-encryption.test.ts",
+      "sourceBlob": "3f84019a63bbcee3cc0503e6182fc6327aaa183c",
+      "destinationPath": "apps/boussole/src/crypto/symmetric-encryption.test.ts",
+      "sha256": "be5de9aa85a838e86fbe0e0ababf1988ad578497851ab3023fe13f17a915944d"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/crypto/symmetric-encryption.ts",
+      "sourceBlob": "7e189e1c0b3643710abb09eb9d3a537066a003a6",
+      "destinationPath": "apps/boussole/src/crypto/symmetric-encryption.ts",
+      "sha256": "b749201245225ab7f6507c95ccc3d489de56fdfd595fbcdb90d177b1123c8263"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/domain/response-set.test.ts",
+      "sourceBlob": "2fc9a49567fdcb2452480b12de22c7d99412df13",
+      "destinationPath": "apps/boussole/src/domain/response-set.test.ts",
+      "sha256": "43ab0e052d5d8b0268570b492b2d1e1a51f8faaba6077217cf21b03cde0da142"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/domain/response-set.ts",
+      "sourceBlob": "8451aeb306c9e3a72bce78579408a477a83a9fe0",
+      "destinationPath": "apps/boussole/src/domain/response-set.ts",
+      "sha256": "1ca4dc0ff58b6fe2acf2362a1dd5d218d6224044cd853b50fd32759b5dff0402"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/domain/upgrade-preview.test.ts",
+      "sourceBlob": "20060c9d3c3d8a1d6f5ae1822401d57691da4861",
+      "destinationPath": "apps/boussole/src/domain/upgrade-preview.test.ts",
+      "sha256": "78947714405b97c7d841fd220621eaf6d0f254b8bea7d6c5c75c1649c2de46e4"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/domain/upgrade-preview.ts",
+      "sourceBlob": "6deae8dee474eb26d4fb33324657cda781d33769",
+      "destinationPath": "apps/boussole/src/domain/upgrade-preview.ts",
+      "sha256": "9672b3349d41b7d3944ccf7eb069ad652c5ccad65ee70332de67e6027e8a0a3f"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/persistence/indexed-db-response-store.test.ts",
+      "sourceBlob": "43002e10077e8347d8316fc6acea17bb79a963f2",
+      "destinationPath": "apps/boussole/src/persistence/indexed-db-response-store.test.ts",
+      "sha256": "68dd030a1f314675f231318be567c8f448d4544be5182bc771d148ae13e2279b"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/persistence/indexed-db-response-store.ts",
+      "sourceBlob": "a0d3949343c783c7b43c1496a48c29b83a756f7a",
+      "destinationPath": "apps/boussole/src/persistence/indexed-db-response-store.ts",
+      "sha256": "515efabefbe762ac84fa04b0da3f86ebcf948c759baf7b5205c556f53bf6ef0c"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/persistence/local-response-store.test.ts",
+      "sourceBlob": "51ecb8872c2d8b9f7a648c1fe6ace486a204f553",
+      "destinationPath": "apps/boussole/src/persistence/local-response-store.test.ts",
+      "sha256": "a99f426260be0c1db740173f695e8587d8b5b6d70fb02a06c799ea6a69d8eb76"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/persistence/local-response-store.ts",
+      "sourceBlob": "5adaf99adeab8c77f7d6c68719df7de2ad682261",
+      "destinationPath": "apps/boussole/src/persistence/local-response-store.ts",
+      "sha256": "58719230def04444d99a10e36b280bd1c55506dbf8c5889151ab6153eafd01f4"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/server/handler.test.ts",
+      "sourceBlob": "cf48ffbfe6103d91e7dde539d67521138ed11f6b",
+      "destinationPath": "apps/boussole/src/server/handler.test.ts",
+      "sha256": "98634d601290494b9e1628200784ff6f263a24ea019d742a97664575d60f82fa"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/server/handler.ts",
+      "sourceBlob": "32bbffd29820eb7d58cb7b857f823203e854442c",
+      "destinationPath": "apps/boussole/src/server/handler.ts",
+      "sha256": "52a70fd11276eda2bbb88e515d046d8ddce585045d5a3d5f6ec899380f21dccc"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/server/index.ts",
+      "sourceBlob": "5742f0e664311c535c1e91752feeec9f71cf4e39",
+      "destinationPath": "apps/boussole/src/server/index.ts",
+      "sha256": "fd88a99605d412f24e18f98fb7075094582bde2af430e7274ab9154ab44f4e29"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/shared/document.tsx",
+      "sourceBlob": "c1ba8200f56c4247111cbb20b2695276bc04c183",
+      "destinationPath": "apps/boussole/src/shared/document.tsx",
+      "sha256": "72e1cc6404040772d98d1b39f1571da6bb76877c4f0314b921e9aa42d40368d8"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/data-ownership.test.tsx",
+      "sourceBlob": "72690c852461202a5d5a416c708d6997df7786c5",
+      "destinationPath": "apps/boussole/src/ui/data-ownership.test.tsx",
+      "sha256": "7c8fbd0a6969d5e27fdf5af78525db9497fbb46a72918f85ae00a918f252854b"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/data-ownership.tsx",
+      "sourceBlob": "6c87a2e61cc7ca5d57e3fe377e9bdd434ceda49d",
+      "destinationPath": "apps/boussole/src/ui/data-ownership.tsx",
+      "sha256": "bca96c89059577316d31c9694d937b78965bbc4656dda146bce7a6e2560fe7f1"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/fixture.ts",
+      "sourceBlob": "eff0bf1ba24f875aac48d4cfc450f47121b4d023",
+      "destinationPath": "apps/boussole/src/ui/fixture.ts",
+      "sha256": "73c3d0d50f51382e013cdbdd68b84cd4766b5e96ec4022fbafc89b149cb04966"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/passphrase-gate.tsx",
+      "sourceBlob": "dff8dea70f1b13386d066e84319bf112f8a4e5a0",
+      "destinationPath": "apps/boussole/src/ui/passphrase-gate.tsx",
+      "sha256": "80551dcfe62a4600a9dae83a1f318b59f210b109c6d4ff63bde8a333285619b9"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/questionnaire-app.test.tsx",
+      "sourceBlob": "25e327d37aea18ec84202ae91247c7a78c54466a",
+      "destinationPath": "apps/boussole/src/ui/questionnaire-app.test.tsx",
+      "sha256": "02fd9bcc6f42ddcb756ba11f6aab624f99a04ef10d8f82e310a4e20a0fbde4f0"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/questionnaire-app.tsx",
+      "sourceBlob": "8a94abb7986ef5d3f4cbbd94cec3b62936d6701a",
+      "destinationPath": "apps/boussole/src/ui/questionnaire-app.tsx",
+      "sha256": "09c653eb16a554def8e5ec7805f15dec88537cf3e5d00f8fda09383d484994f0"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/questionnaire.test.tsx",
+      "sourceBlob": "39060cb7ec0e1d71154177c06d58cdb6db95f2e1",
+      "destinationPath": "apps/boussole/src/ui/questionnaire.test.tsx",
+      "sha256": "ee6fa877ed0b79f3e1c782cd22292ee28db9b0cba2cd020ab2534184dc431383"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "apps/boussole/src/ui/questionnaire.tsx",
+      "sourceBlob": "1c3f0a0b561ffa742475954c21a8d58edf8ac9da",
+      "destinationPath": "apps/boussole/src/ui/questionnaire.tsx",
+      "sha256": "ea65d0e234b405c970a448f32cd041cb000079db2449f35fcf75340a97497313"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "biome.json",
+      "sourceBlob": "84c1774437e46c45d2b33b5bd615d11c06fcae81",
+      "destinationPath": "biome.json",
+      "sha256": "976c455b6b6657ed792b81158daabfa91c1e014cdb0e37a83b8c9d15f606ea92"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "bun.lock",
+      "sourceBlob": "771cf612044460334ed9a7695585942f32f0a0db",
+      "destinationPath": "bun.lock",
+      "sha256": "44759c23dccfccb10682b9fdd62a13dd2e23034397ce4d97c79c86bf47ee5211"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "bunfig.toml",
+      "sourceBlob": "187aad3cc3469a3aa9a58a0979a0e10f61fce2b9",
+      "destinationPath": "bunfig.toml",
+      "sha256": "5da4d7eb4d1e5c1c37d487034e56773e8e1f568daec675b114c5257942f48342"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "docs/apps/boussole.md",
+      "sourceBlob": "5ec819e8a5e29f3c8394e511b028af8b8de582f9",
+      "destinationPath": "docs/apps/boussole.md",
+      "sha256": "70512269d66b4377daae37c1b9a448710c5ec939aa02aa9f2f68dcb4fa0bca2c"
+    },
+    {
+      "sourceRepository": "boussole-politique",
+      "sourceCommit": "a3347c8f6b1b80531d0c8a701a67d8eb03dedc56",
+      "sourcePath": "package.json",
+      "sourceBlob": "d58b73064c64a17bbe96fd21d57048705c7381d0",
+      "destinationPath": "package.json",
+      "sha256": "c1f57e35840847f85a7413fefc80bb8290e0972bbb4df32e9a0ddc63fc84b21d"
+    }
+  ],
+  "excluded": [
+    {
+      "source": "boussole-politique",
+      "path": ".github/workflows/ci.yml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "boussole-politique",
+      "path": ".github/workflows/context-hygiene.yml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "boussole-politique",
+      "path": "README.md",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    },
+    {
+      "source": "boussole-politique",
+      "path": "project.v1.yaml",
+      "reason": "preserve current presentation and avoid activating historical agent/provider configuration"
+    }
+  ],
+  "status": "Source imported and locally tested; no publication or deployment performed.",
+  "adaptations": [
+    {
+      "path": ".gitignore",
+      "sourceSha256": "19b23de57a80020117177f6f3a34b5b5ce98c2623a8e8e6e211453bbf6458bfa",
+      "currentSha256": "8a2de8b3e4d25c532fd89bd03eb95e9f1c09e8876abf2a54abfa7f74aa04db9c",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "REUSE.toml",
+      "sourceSha256": "f67a55da7244ed1d397523eae9a3c1828ba36138c6b23cdfd296adeb30a37313",
+      "currentSha256": "a4c57650fbae2d07006c88492d66ace56b82695a987f661569dadaa8ff406b2f",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "apps/boussole/e2e/pwa.e2e.ts",
+      "sourceSha256": "e8810d9ace66b628166090435a741d6f798499e6077c04b4788465ff240a9273",
+      "currentSha256": "57767e7017c8fd4fd07bb37b7d47530607ada33365c34fbfd87410cdb2eb21b4",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "apps/boussole/package.json",
+      "sourceSha256": "cce870e46e460bad37235ec7f039051ee21742f7c68b600a38e1ec890fc78ccf",
+      "currentSha256": "bf1c8a9690d49938eb502b3a715e52f1a89045a9a27660856839e0b4065697f7",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "apps/boussole/scripts/build.ts",
+      "sourceSha256": "b68f64050f144f4fbeb23cf14812ff2f1a950e0420bf4d8f732bea53299cb6c5",
+      "currentSha256": "d5ab09a96ec4afc999c07a2fff86034a36f14165f472e4fdd27f98bb7955b869",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "apps/boussole/src/server/handler.ts",
+      "sourceSha256": "52a70fd11276eda2bbb88e515d046d8ddce585045d5a3d5f6ec899380f21dccc",
+      "currentSha256": "4529ed27319ac278ce91e1b59119fccb29e6b2b51c1b4ca80e9acbef7f7d4258",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "bun.lock",
+      "sourceSha256": "44759c23dccfccb10682b9fdd62a13dd2e23034397ce4d97c79c86bf47ee5211",
+      "currentSha256": "a8dd793d5340f5ebdcf5a967cb7e6c053fc39302cba4e641ff3ae12963d7c66e",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    },
+    {
+      "path": "package.json",
+      "sourceSha256": "c1f57e35840847f85a7413fefc80bb8290e0972bbb4df32e9a0ddc63fc84b21d",
+      "currentSha256": "f3b8a478c26a777005fe04463c0064b714ede9318b0e8ec614acc2b13d7628c0",
+      "change": "Local composition, build/test adaptation or current presentation; original source remains preserved."
+    }
+  ]
+}

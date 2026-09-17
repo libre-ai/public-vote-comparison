@@ -1,0 +1,234 @@
+version = 1
+
+# Annotations follow the canonical policy in libre-ai/libre-ai/LICENSING.md and
+# libre-ai/libre-ai/DATA-PROVENANCE.md. Within this file, the last matching
+# annotation wins, so the blocks run from the broadest default to the most
+# specific carve-out.
+
+# First-party software by default: forge configuration, the frozen Rust
+# workspace and the application host.
+[[annotations]]
+path = [
+  ".github/**",
+  ".gitignore",
+  "Cargo.lock",
+  "Cargo.toml",
+  "apps/**",
+  "crates/**",
+  "deny.toml",
+  "rust-toolchain.toml",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "EUPL-1.2"
+
+# Editorial documentation and first-party project records: the specifications,
+# the methodology notes, the agent-context surface and the prose analyses.
+[[annotations]]
+path = ["*.md", "**/*.md", "docs/**", "proofs/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Interoperability contracts, synthetic test material and generic harnesses.
+# `vecteurs-test.json` is an executable specification proven bit-for-bit by
+# `crates/scoring/tests/golden_vectors.rs`, and its cases are synthetic — not
+# extracted records. `m1-gate-registration.v1.json` is normative machine input
+# consumed by `scripts/verify-m1-sensitivity.py`, not editorial prose.
+# `dry-run/fixtures/**` is the same kind of object: link overrides read as input
+# by `dry-run/scripts/q8-vivier-elargi.py`, so it follows that precedent rather
+# than the editorial block it used to sit in.
+[[annotations]]
+path = [
+  "docs/methodology/m1-gate-registration.v1.json",
+  "dry-run/fixtures/**",
+  "dry-run/scripts/**",
+  "fixtures/**",
+  "scripts/**",
+  "vecteurs-test.json",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Dry-run analyses that reproduce no upstream record. These hold only figures we
+# derived ourselves — funnel counts, polarisation rates, cross-check tables — and
+# prose that cites at most four dossier identifiers as worked examples. They
+# reproduce no individual and no per-record extract of the source dataset, so the
+# confirmation required below is satisfied and our own licence applies. Listed
+# file by file rather than by glob: the licence follows what a file contains, and
+# a glob cannot see that.
+#
+# Our licence applying outbound does not cancel what we owe inbound: these
+# figures were derived from Assemblée nationale open data, and the Licence
+# Ouverte requires attribution of the source and update date for derived
+# information too. That notice is in `LICENSE` and `dry-run/DATA-PROVENANCE.md`
+# and covers these files. The difference with the block further down is the
+# copyright line, not the duty to attribute.
+[[annotations]]
+path = [
+  "dry-run/out/q1-funnel.md",
+  "dry-run/out/q2-polarisation.md",
+  "dry-run/out/q3-verif.md",
+  "dry-run/out/q3-version.md",
+  "dry-run/out/q8-vivier-elargi.md",
+  "dry-run/out/v-q2-check.json",
+  "dry-run/out/v-q2-check.md",
+  "dry-run/out/v6.md",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Third-party open data from the Assemblée nationale, redistributed as acquired.
+# The canonical policy states that third-party data keeps its original terms and
+# is never covered by a blanket repository licence. These five archives hold
+# between 4 106 and 9 486 unmodified upstream JSON files; we wrote none of their
+# bytes, so only the producer is named as copyright holder.
+#
+# Those original terms are now established rather than presumed: the producer
+# publishes this material under the Licence Ouverte / Open Licence, and the
+# owner ruled on 2026-07-25 that it is public open data under Etalab 2.0. The
+# provenance record the canonical policy demands before publication is complete
+# in `dry-run/DATA-PROVENANCE.md` — source paths, per-archive SHA-256, update
+# dates, sui generis database rights and personal-data analysis. Two of the five
+# archives are proven byte-for-byte identical to the producer's live copy.
+#
+# The licence obliges attribution of the source and of the date of last update.
+# That notice is carried in `LICENSE` and detailed per archive in the provenance
+# record; it is a condition of this grant, not a courtesy.
+[[annotations]]
+path = ["dry-run/data/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "Assemblée nationale"
+SPDX-License-Identifier = "etalab-2.0"
+
+# Derived outputs that redistribute upstream records, and therefore carry the
+# upstream licence alongside ours. `DATA-PROVENANCE.md` allows an explicit
+# licence on an aggregated result only after confirming it does not reproduce
+# restricted inputs. That confirmation can now be given: the inputs are not
+# restricted. The producer publishes them under the Licence Ouverte, which
+# permits redistribution and adaptation, and `dry-run/DATA-PROVENANCE.md`
+# completes the record the policy requires. The source review that
+# `docs/plan-mvp.md` made a precondition has been carried out, and the choice
+# `revue-specs-2026-06-12.md` left between Etalab and ODbL was settled on
+# 2026-07-25 in favour of the Licence Ouverte, aligned on the source.
+#
+# `etalab-2.0 AND CC-BY-4.0` states what these files actually are: the upstream
+# records stay under the producer's terms, our selection and computation under
+# ours. Both are permissive and both require attribution, so the combination adds
+# no conflicting obligation — it names two attributions rather than one.
+#
+# The test is applied to content, identically whatever the extension, because
+# `.md` and `.json` come out of the same scripts. A file is listed here when it
+# either (1) names an individual from the 577-member Assemblée nationale roster
+# or carries a `PA…` actor identifier, or (2) reproduces a per-record table of
+# legislative dossiers. The split is clean rather than arbitrary: the files below
+# carry 11 to 160 dossier records, while every file granted above cites at most
+# four as examples.
+#
+# Note this is a nominative-and-record test, not a privacy test. These are public
+# votes cast by elected representatives in the exercise of their mandate, and
+# their publicity is a legal obligation. Nothing about their confidentiality was
+# ever in doubt, and the licence of the source dataset is no longer in doubt
+# either; the test is kept because it identifies which files owe the producer an
+# attribution for records they carry, which is a live obligation under the
+# Licence Ouverte.
+#
+# Dual copyright is correct here and only here: these are derivative works, ours
+# by construction and the producer's by the records they carry. A new output file
+# matches no block and fails `reuse lint` — deliberately, so it cannot inherit a
+# grant by silence.
+[[annotations]]
+path = [
+  "dry-run/out/corpus.json",
+  "dry-run/out/q1-funnel.json",
+  "dry-run/out/q1-verify-gap.json",
+  "dry-run/out/q1-verify.json",
+  "dry-run/out/q1-verify2.json",
+  "dry-run/out/q2-polarisation.json",
+  "dry-run/out/q3-verif.json",
+  "dry-run/out/q3-version.json",
+  "dry-run/out/q4-mandats.json",
+  "dry-run/out/q4-mandats.md",
+  "dry-run/out/q5-miseaupoint.json",
+  "dry-run/out/q5-miseaupoint.md",
+  "dry-run/out/q6-censure.json",
+  "dry-run/out/q6-censure.md",
+  "dry-run/out/q7-simulation.json",
+  "dry-run/out/q7-simulation.md",
+  "dry-run/out/q7-verif.json",
+  "dry-run/out/q7-verif.md",
+  "dry-run/out/q8-vivier-elargi.json",
+  "dry-run/out/v4-groupchanges.json",
+  "dry-run/out/v4-mandats-verify.json",
+  "dry-run/out/v4-mandats-verify.md",
+  "dry-run/out/v5-verify.json",
+  "dry-run/out/v5-verify.md",
+  "dry-run/out/v6.json",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = ["Assemblée nationale", "2026 Libre AI contributors"]
+SPDX-License-Identifier = "etalab-2.0 AND CC-BY-4.0"
+
+# Visual identity — no outbound licence.
+#
+# The canonical table has no row for brand assets, and that absence is
+# deliberate rather than an oversight: LICENSING.md carries a `Trademarks`
+# section stating that software and content licences grant no rights to the
+# names, logos or marks of the project, and TRADEMARKS.md requires prior written
+# permission to alter a logo or use a mark commercially.
+#
+# These files were MIT until 2026-07-25, which contradicted that policy head-on:
+# MIT grants "modify, merge, publish, distribute, sublicense, and/or sell" —
+# precisely what the trademark policy reserves. Trademark law protects a logo
+# whatever licence sits on the file, so the legal exposure was limited; but a
+# public MIT declaration is an explicit invitation to modify the identity, and
+# that invitation is what is withdrawn.
+#
+# `.github/assets/**` joins this block on 2026-07-26. It holds the repository
+# social-preview card, which carries the logo and the wordmark, and it was
+# sitting under the `.github/**` software block above at EUPL-1.2 — the same
+# contradiction the MIT withdrawal above removed, in a directory nobody thought
+# to look at because the file is referenced from no tracked file (it is uploaded
+# through repository Settings). EUPL-1.2 grants reproduction, modification and
+# distribution; the trademark policy reserves exactly that for the logo. The
+# licence follows what a file CONTAINS, which is the same test applied to the
+# open-data carve-outs above.
+[[annotations]]
+path = [
+  ".github/assets/**",
+  "apps/web/assets/**",
+  "assets/brand/*.svg",
+  "assets/brand/manifest.json",
+  "proofs/brand/icon-size-sheet.png",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "LicenseRef-Trademark"
+
+# Grafted hub content and workspace bootstrap (ADR-0020, γ 3.5).
+[[annotations]]
+path = ["**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "EUPL-1.2"
+
+# Documentation keeps the frozen-home CC-BY-4.0 grant.
+[[annotations]]
+path = ["*.md", "**/*.md", "docs/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Preserved documentary material and recovery records.
+[[annotations]]
+path = ["docs/portfolio-material.json", "docs/code-recovery-provenance.json", "docs/source-licensing/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = ["docs/DEVELOPMENT.md", "docs/verification-status.json"]
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "CC-BY-4.0"

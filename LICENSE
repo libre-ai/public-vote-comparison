@@ -1,0 +1,71 @@
+This repository is the reserved product home of Boussole Politique. It carries a
+frozen reference implementation, its specifications, and the dry-run material
+built on French parliamentary open data. It is a multi-licence repository.
+
+The licence for each file is declared through REUSE.toml:
+
+- EUPL-1.2: first-party software — the Rust workspace under `crates/`, the
+  application host under `apps/` apart from its generated brand assets, the
+  workspace manifests and the files under `.github/`;
+- Apache-2.0: interoperability and test material — the executable scoring
+  vectors, the registered methodology parameters, the dry-run link overrides
+  under `dry-run/fixtures/`, and the generic verification and dry-run harnesses
+  under `scripts/` and `dry-run/scripts/`;
+- CC-BY-4.0: editorial documentation, specifications, methodology analyses and
+  first-party project records, including the evidence files under `proofs/`
+  apart from the rendered brand proof sheet;
+- LicenseRef-Trademark: the visual identity under `assets/brand/`, its generated
+  derivatives under `apps/web/assets/` and the rendered proof sheet under
+  `proofs/brand/`. These carry **no outbound licence at all**: they are governed
+  by the organisation's trademark policy, which reserves the right to alter or
+  commercially reuse a mark. See `assets/brand/LICENSE.md`;
+- etalab-2.0 (Licence Ouverte / Open Licence): the Assemblée nationale source
+  archives under `dry-run/data/`, redistributed as acquired. That material keeps
+  the terms of its producer, which permit reproduction, redistribution,
+  adaptation and commercial reuse subject to attribution;
+- etalab-2.0 AND CC-BY-4.0: those dry-run outputs that redistribute upstream
+  records. They are derivative works — the records are the producer's, the
+  selection and computation ours — and carry both licences accordingly.
+
+Which dry-run outputs fall under that last point is decided by what a file
+contains, not by its extension: an output carries the upstream licence when it
+names an individual representative or reproduces a per-record table of
+legislative dossiers. Prose and `.json` come out of the same scripts, so the
+same test is applied to both, file by file, in REUSE.toml. Outputs holding only
+figures we derived are licensed CC-BY-4.0 like the rest of our analyses.
+
+Full licence texts are stored in LICENSES/.
+
+## Attribution of the source data
+
+The Licence Ouverte grants its freedoms on one condition: citing the source and
+the date of the last update of the information reused. This repository
+discharges that condition as follows.
+
+  Assemblée nationale, open data downloaded from
+  https://data.assemblee-nationale.fr/, under the Licence Ouverte / Open
+  Licence. Updates of 2026-06-12 (legislature 17: scrutins, dossiers
+  législatifs, AMO10) and 2024-06-28 (legislature 16: scrutins, dossiers
+  législatifs).
+
+The notice covers the archives and every analysis derived from them, including
+those licensed CC-BY-4.0 alone: adapting the information does not extinguish the
+attribution owed on it. Anyone redistributing this material or its derivatives
+carries the same condition forward.
+
+This attribution confers no official character on the reuse and implies no
+endorsement by the Assemblée nationale.
+
+The full provenance record required before publication — source paths,
+per-archive SHA-256, update dates, database rights and personal-data analysis —
+is in `dry-run/DATA-PROVENANCE.md`.
+
+No licence here grants any right over the names, logos or marks "Libre AI" and
+"Boussole Politique".
+
+The organization-wide licensing policy — scope, precedence, historical grants,
+data and contribution rules — is the canonical one and is not restated here:
+https://github.com/libre-ai/libre-ai/blob/main/LICENSING.md
+
+Historical revisions previously published under MIT remain available under those
+terms. No previous licence grant is withdrawn.
