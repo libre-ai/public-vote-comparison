@@ -13,11 +13,13 @@ export function Questionnaire({
   responses,
   onAnswer,
   onSkip,
+  disabled = false,
 }: {
   readonly statements: readonly string[];
   readonly responses: readonly LocalResponse[];
   readonly onAnswer?: (statementId: string, value: number) => void;
   readonly onSkip?: (statementId: string) => void;
+  readonly disabled?: boolean;
 }) {
   const byId = new Map(responses.map((r) => [r.statementId, r]));
   const answered = responses.filter((r) => r.kind === "answer").length;
@@ -37,7 +39,7 @@ export function Questionnaire({
           const response = byId.get(statementId);
           return (
             <Surface key={statementId} aria-labelledby={`${statementId}-legend`}>
-              <fieldset className="lai-stack">
+              <fieldset className="lai-stack" disabled={disabled}>
                 <legend id={`${statementId}-legend`}>{statementId}</legend>
                 <p data-testid={`state-${statementId}`}>{stateLabel(response)}</p>
                 <div className="lai-enhanced-only lai-cluster">

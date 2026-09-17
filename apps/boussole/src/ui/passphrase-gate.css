@@ -1,0 +1,90 @@
+.passphrase-gate {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--lai-color-border-subtle);
+}
+
+.passphrase-gate h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.passphrase-gate-content > p {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.passphrase-gate .data-loss-warning {
+  background: var(--lai-color-surface-subtle);
+  color: var(--lai-color-warning);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.passphrase-gate .form-group {
+  margin-bottom: 1rem;
+}
+
+.passphrase-gate .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.passphrase-gate .form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--lai-color-border-default);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.passphrase-gate .form-group input:focus {
+  outline: none;
+  border-color: var(--lai-color-action-primary);
+  box-shadow: 0 0 0 2px var(--lai-color-focus-ring);
+}
+
+.passphrase-gate .form-group input[aria-invalid="true"] {
+  border-color: var(--lai-color-danger);
+}
+
+.passphrase-gate .form-hint {
+  font-size: 0.85rem;
+  color: var(--lai-color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.passphrase-gate .button-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--lai-color-action-primary);
+  color: var(--lai-color-text-inverse);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.passphrase-gate .button-primary:hover:not(:disabled) {
+  background: var(--lai-color-action-primary-hover);
+}
+
+.passphrase-gate .button-primary:disabled {
+  background: var(--lai-color-state-disabled-background);
+  cursor: not-allowed;
+}
+
+.passphrase-gate .lai-error {
+  background: var(--lai-color-surface-subtle);
+  color: var(--lai-color-danger);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}

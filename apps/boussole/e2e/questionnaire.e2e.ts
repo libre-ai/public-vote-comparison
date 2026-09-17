@@ -213,3 +213,53 @@ async function verifyEncryptedAtRest(page: Page): Promise<void> {
     );
   }
 }
+
+test("holds answers disabled until the initial IndexedDB load completes", async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", () => errors.push("page-error"));
+  page.on("console", (message) => { if (message.type() === "error") errors.push("console-error"); });
+  await page.addInitScript(() => {
+    const original = IDBFactory.prototype.open;
+    let first = true;
+    IDBFactory.prototype.open = function (...args: Parameters<IDBFactory["open"]>) {
+      const request = original.apply(this, args);
+      if (args[0] === "libre-ai-boussole" && first) {
+        first = false;
+        Object.defineProperty(request, "onsuccess", {
+          configurable: true,
+          set(callback: ((event: Event) => void) | null) {
+            request.addEventListener("success", (event) => {
+              Object.defineProperty(window, "releaseQuestionnaireLoad", {
+                configurable: true,
+                value: () => { callback?.call(request, event); },
+              });
+            }, { once: true });
+          },
+        });
+      }
+      return request;
+    };
+  });
+  await page.goto("/");
+  await expect(page.locator("html")).toHaveAttribute("data-hydrated", "true");
+  await page.waitForFunction(() => typeof Reflect.get(window, "releaseQuestionnaireLoad") === "function");
+  const statement = page.getByRole("group", { name: "stmt-services-publics" });
+  const answer = statement.getByRole("button", { name: "+3" });
+  await expect(answer).toBeDisabled();
+  await expect(statement.getByRole("button", { name: "Passer" })).toBeDisabled();
+  await answer.dispatchEvent("click");
+  await expect(page.getByTestId("progress")).toContainText("0 / 4");
+  await expect(page.getByTestId("passphrase-gate")).not.toBeVisible();
+  await page.evaluate(() => Reflect.get(window, "releaseQuestionnaireLoad")());
+  await expect(answer).toBeEnabled();
+  await answer.click();
+  await expect(page.getByTestId("passphrase-gate")).toBeVisible();
+  await expect(page.getByTestId("passphrase-gate")).toHaveCSS("max-width", "500px");
+  await expect(page.getByTestId("passphrase-gate").locator("style")).toHaveCount(0);
+  await page.fill('input[id="passphrase-input"]', "retained-answer-fixture");
+  await page.fill('input[id="confirm-input"]', "retained-answer-fixture");
+  await page.getByTestId("submit-passphrase").click();
+  await expect(page.getByTestId("state-stmt-services-publics")).toContainText("Répondu (3)");
+  await expect(page.getByTestId("progress")).toContainText("1 / 4");
+  expect(errors).toEqual([]);
+});

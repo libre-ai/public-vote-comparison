@@ -43,9 +43,9 @@ export interface QuestionnaireController {
   readonly unlockWithPassphrase: (passphrase: string) => Promise<void>;
 }
 
-// The interactive controller. Without a store (SSR) it stays at the empty set with
-// status "ready" (the SSR baseline). With a store, the initial status is "loading"
-// until the mount effect loads the persisted set; it then persists every mutation.
+// Server and first client render share the same disabled loading baseline.
+// Only the mount effect may make the questionnaire ready, after loading the store.
+// A client without a store becomes ready after mount; SSR never runs that effect.
 // A corrupt local store is surfaced fail-closed (never rehydrated).
 // Encryption is mandatory: on first save, if no passphrase has been set, status moves
 // to "needs-passphrase" and the save is deferred until the user provides one via setPassphrase().
@@ -53,7 +53,7 @@ export interface QuestionnaireController {
 // unlockWithPassphrase() to decrypt.
 export function useQuestionnaire(store?: LocalResponseStore): QuestionnaireController {
   const [set, setSet] = useState<ResponseSet>(emptySet);
-  const [status, setStatus] = useState<QuestionnaireStatus>(store ? "loading" : "ready");
+  const [status, setStatus] = useState<QuestionnaireStatus>("loading");
   const [encryption, setEncryption] = useState<EncryptionContext | undefined>(undefined);
   const [passphraseError, setPassphraseError] = useState<PassphraseErrorKind | undefined>(
     undefined,
@@ -64,7 +64,10 @@ export function useQuestionnaire(store?: LocalResponseStore): QuestionnaireContr
   >(undefined);
 
   useEffect(() => {
-    if (!store) return;
+    if (!store) {
+      setStatus("ready");
+      return;
+    }
     let cancelled = false;
     store.load().then((result) => {
       if (cancelled) return;
@@ -90,6 +93,8 @@ export function useQuestionnaire(store?: LocalResponseStore): QuestionnaireContr
   }, [store]);
 
   function commit(next: ResponseSet): void {
+    // A delayed initial load must never overwrite a premature local answer.
+    if (status !== "ready") return;
     setSet(next);
     if (encryption) {
       void store?.save(next, encryption).catch(() => {

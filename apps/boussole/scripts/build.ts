@@ -34,7 +34,8 @@ const foundationCss = await Bun.file(
   new URL(import.meta.resolve("@libre-ai/ui/styles.css")),
 ).text();
 const utilityCss = await buildTailwindUtilities([]);
-await Bun.write(join(assets, "styles.css"), `${foundationCss}\n${utilityCss}`);
+const passphraseCss = await Bun.file(join(root, "src/ui/passphrase-gate.css")).text();
+await Bun.write(join(assets, "styles.css"), `${foundationCss}\n${utilityCss}\n${passphraseCss}`);
 await Bun.write(join(assets, "icon.svg"), Bun.file(join(root, "public/icon.svg")));
 await Bun.write(join(dist, "static/index.html"), renderStaticDocument(boussoleDocument()));
 await Bun.write(

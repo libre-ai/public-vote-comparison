@@ -9,7 +9,8 @@ import { Questionnaire } from "./questionnaire";
 // The controller's handlers are passed unconditionally (they fold through the
 // domain and persist via the optional store), so the server render (no store) and
 // the client's first render (store present) produce IDENTICAL markup — event
-// handlers are not serialized into HTML, and no other output depends on the store.
+// handlers are not serialized into HTML. Both initial renders start loading with
+// disabled controls until the client effect resolves the local store.
 // This keeps hydration a byte-for-byte match; interactivity is inert without
 // JavaScript because the controls live in `lai-enhanced-only`.
 export function QuestionnaireApp({ store }: { readonly store?: LocalResponseStore }) {
@@ -42,6 +43,7 @@ export function QuestionnaireApp({ store }: { readonly store?: LocalResponseStor
             responses={controller.set.responses}
             onAnswer={controller.answer}
             onSkip={controller.skip}
+            disabled={controller.status !== "ready"}
           />
           {controller.status === "corrupt" ? null : (
             <DataOwnership

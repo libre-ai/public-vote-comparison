@@ -40,7 +40,7 @@ export function PassphraseGate({ mode, error, onSubmit }: PassphraseGateProps) {
             <>
               <h2 id="gate-title">Protégez vos réponses</h2>
               <p id="gate-description">
-                Définissez une phrase secrète pour chiffrer vos réponses localement. Minimum 8
+                Définissez une phrase secrète pour chiffrer vos réponses localement. Minimum 12
                 caractères.
               </p>
               <p className="data-loss-warning">
@@ -141,98 +141,7 @@ export function PassphraseGate({ mode, error, onSubmit }: PassphraseGateProps) {
         </div>
       </form>
 
-      <style>{`
-        .passphrase-gate {
-          padding: 2rem;
-          margin: 2rem auto;
-          max-width: 500px;
-          border-radius: 8px;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
 
-        .passphrase-gate h2 {
-          margin: 0 0 0.5rem 0;
-          font-size: 1.5rem;
-        }
-
-        .passphrase-gate-content > p {
-          margin: 0.5rem 0 1rem 0;
-          font-size: 0.95rem;
-          line-height: 1.5;
-        }
-
-        .data-loss-warning {
-          background: #fff3cd;
-          color: #856404;
-          padding: 1rem;
-          border-radius: 4px;
-          margin: 1rem 0;
-        }
-
-        .form-group {
-          margin-bottom: 1rem;
-        }
-
-        .form-group label {
-          display: block;
-          margin-bottom: 0.5rem;
-          font-weight: 500;
-        }
-
-        .form-group input {
-          width: 100%;
-          padding: 0.75rem;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 1rem;
-        }
-
-        .form-group input:focus {
-          outline: none;
-          border-color: #0066cc;
-          box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
-        }
-
-        .form-group input[aria-invalid="true"] {
-          border-color: #dc3545;
-        }
-
-        .form-hint {
-          font-size: 0.85rem;
-          color: #666;
-          margin-top: 0.25rem;
-        }
-
-        .button-primary {
-          width: 100%;
-          padding: 0.75rem;
-          background: #0066cc;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          font-size: 1rem;
-          font-weight: 500;
-          cursor: pointer;
-          transition: background 0.2s;
-        }
-
-        .button-primary:hover:not(:disabled) {
-          background: #0052a3;
-        }
-
-        .button-primary:disabled {
-          background: #ccc;
-          cursor: not-allowed;
-        }
-
-        .lai-error {
-          background: #f8d7da;
-          color: #721c24;
-          padding: 1rem;
-          border-radius: 4px;
-          margin-bottom: 1rem;
-        }
-      `}</style>
     </div>
   );
 }
